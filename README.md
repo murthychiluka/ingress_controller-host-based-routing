@@ -1,3 +1,4 @@
+```text
 self-signed certificate validation:
 
 [root@ip-172-31-71-196 ~]# curl -I -H "Host: app1.example.com" \
@@ -8,7 +9,8 @@ Content-Type: text/html
 Content-Length: 164
 Connection: keep-alive
 Location: https://app1.example.com
-
+```
+```text
 [root@ip-172-31-71-196 ~]# curl -k --resolve app1.example.com:443:44.193.48.7 \
 https://app1.example.com
 <html>
@@ -17,7 +19,10 @@ https://app1.example.com
   </body>
 </html>
 [root@ip-172-31-71-196 ~]# 
+```
+
 ```text
+
 [root@ip-172-31-71-196 ~]# kubectl get secret ingress-tls -n ingress-lab
 NAME          TYPE                DATA   AGE
 ingress-tls   kubernetes.io/tls   2      25m
