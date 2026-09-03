@@ -17,10 +17,13 @@ https://app1.example.com
   </body>
 </html>
 [root@ip-172-31-71-196 ~]# 
-```
+```text
 [root@ip-172-31-71-196 ~]# kubectl get secret ingress-tls -n ingress-lab
 NAME          TYPE                DATA   AGE
 ingress-tls   kubernetes.io/tls   2      25m
+```
+
+```text
 [root@ip-172-31-71-196 ~]# kubectl describe ingress host-based-ingress -n ingress-lab
 Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
 Name:             host-based-ingress
